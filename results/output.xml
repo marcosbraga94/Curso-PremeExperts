@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210621 11:16:13.262" rpa="false" schemaversion="2">
+<suite id="s1" name="Webautomation" source="C:\Users\MarcosBraga\Desktop\Prime Experts - Codigos\tests\webautomation.robot">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
+<kw name="Abrir o navegador" library="kw_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210621 11:16:13.782" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210621 11:16:13.782" endtime="20210621 11:16:16.570"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:13.781" endtime="20210621 11:16:16.570"/>
+</kw>
+<kw name="Acessar a página home do site Automation Practice">
+<msg timestamp="20210621 11:16:16.584" level="FAIL">No keyword with name 'Acessar a página home do site Automation Practice' found.</msg>
+<status status="FAIL" starttime="20210621 11:16:16.584" endtime="20210621 11:16:16.585"/>
+</kw>
+<kw name="Digitar o nome do produto &quot;Blouse&quot; no campo de pesquisa" library="kw_automation" sourcename="Digitar o nome do produto &quot;${PRODUCT}&quot; no campo de pesquisa">
+<status status="NOT RUN" starttime="20210621 11:16:16.585" endtime="20210621 11:16:16.586"/>
+</kw>
+<kw name="Clicar no botão pesquisar" library="kw_automation">
+<status status="NOT RUN" starttime="20210621 11:16:16.586" endtime="20210621 11:16:16.586"/>
+</kw>
+<kw name="Conferir se o produto &quot;Blouse&quot; foi listado no site" library="kw_automation" sourcename="Conferir se o produto &quot;${PRODUCT}&quot; foi listado no site">
+<status status="NOT RUN" starttime="20210621 11:16:16.586" endtime="20210621 11:16:16.586"/>
+</kw>
+<kw name="Fechar o navegador" library="kw_automation" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210621 11:16:16.589" endtime="20210621 11:16:18.831"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:16.587" endtime="20210621 11:16:18.831"/>
+</kw>
+<status status="FAIL" starttime="20210621 11:16:13.780" endtime="20210621 11:16:18.832">No keyword with name 'Acessar a página home do site Automation Practice' found.</status>
+</test>
+<test id="s1-t2" name="Caso de Teste 02: Pesquisar produto não existente">
+<kw name="Abrir o navegador" library="kw_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210621 11:16:18.836" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210621 11:16:18.836" endtime="20210621 11:16:20.402"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:18.835" endtime="20210621 11:16:20.403"/>
+</kw>
+<kw name="Acessar a página inicial do site" library="kw_automation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210621 11:16:20.410" level="INFO">Opening url 'http://automationpractice.com/'</msg>
+<status status="PASS" starttime="20210621 11:16:20.409" endtime="20210621 11:16:31.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210621 11:16:41.864" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210621 11:16:31.858" endtime="20210621 11:16:41.864"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210621 11:16:41.880" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210621 11:16:41.865" endtime="20210621 11:16:41.880"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:20.408" endtime="20210621 11:16:41.880"/>
+</kw>
+<kw name="Digitar o nome do produto &quot;itemNãoExistente&quot; no campo de pesquisa" library="kw_automation" sourcename="Digitar o nome do produto &quot;${PRODUCT}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=search_query_top</arg>
+<arg>${PRODUCT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210621 11:16:41.884" level="INFO">Typing text 'itemNãoExistente' into text field 'id=search_query_top'.</msg>
+<status status="PASS" starttime="20210621 11:16:41.880" endtime="20210621 11:16:42.043"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:41.880" endtime="20210621 11:16:42.043"/>
+</kw>
+<kw name="Clicar no botão pesquisar" library="kw_automation">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name=submit_search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210621 11:16:42.044" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" starttime="20210621 11:16:42.044" endtime="20210621 11:16:46.819"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:42.044" endtime="20210621 11:16:46.820"/>
+</kw>
+<kw name="Conferir mensagem de erro &quot;No results were found for your search &quot;itemNãoExistente&quot;&quot;" library="kw_automation" sourcename="Conferir mensagem de erro &quot;${ERROR}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="center_column"]/p[@class="alert alert-warning"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210621 11:16:46.822" endtime="20210621 11:16:46.872"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=//*[@id="center_column"]/p[@class="alert alert-warning"]</arg>
+<arg>${ERROR}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210621 11:16:46.873" level="INFO">Verifying element 'xpath=//*[@id="center_column"]/p[@class="alert alert-warning"]' contains exact text 'No results were found for your search "itemNãoExistente"'.</msg>
+<status status="PASS" starttime="20210621 11:16:46.872" endtime="20210621 11:16:46.906"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:46.821" endtime="20210621 11:16:46.906"/>
+</kw>
+<kw name="Fechar o navegador" library="kw_automation" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210621 11:16:46.907" endtime="20210621 11:16:49.135"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:46.907" endtime="20210621 11:16:49.135"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:18.834" endtime="20210621 11:16:49.136"/>
+</test>
+<test id="s1-t3" name="Caso de Teste 03: Listar Produtos">
+<kw name="Abrir o navegador" library="kw_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210621 11:16:49.140" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210621 11:16:49.139" endtime="20210621 11:16:50.718"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:49.139" endtime="20210621 11:16:50.718"/>
+</kw>
+<kw name="Acessar a página inicial do site" library="kw_automation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210621 11:16:50.723" level="INFO">Opening url 'http://automationpractice.com/'</msg>
+<status status="PASS" starttime="20210621 11:16:50.722" endtime="20210621 11:17:03.860"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210621 11:17:13.879" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210621 11:17:03.861" endtime="20210621 11:17:13.879"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210621 11:17:13.895" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210621 11:17:13.879" endtime="20210621 11:17:13.895"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:50.721" endtime="20210621 11:17:13.896"/>
+</kw>
+<kw name="Passar o mouse por cima da categoria &quot;Women&quot; no menu principal superior de categorias" library="kw_automation" sourcename="Passar o mouse por cima da categoria &quot;${CATEGORIES}&quot; no menu principal superior de categorias">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//*[@id="block_top_menu"]/ul/li[1]/a[@class="sf-with-ul"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20210621 11:17:13.899" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="block_top_menu"]/ul/li[1]/a[@class="sf-with-ul"]'.</msg>
+<status status="PASS" starttime="20210621 11:17:13.898" endtime="20210621 11:17:14.193"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:13.896" endtime="20210621 11:17:14.193"/>
+</kw>
+<kw name="Clicar na sub categoria &quot;Summer Dresses&quot;" library="kw_automation" sourcename="Clicar na sub categoria &quot;${SUB_CATEGORY}&quot;">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[2]/ul/li[3]/a</arg>
+<arg>${SUB_CATEGORY}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20210621 11:17:14.194" endtime="20210621 11:17:14.246"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[2]/ul/li[3]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210621 11:17:14.248" level="INFO">Clicking link 'xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[2]/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20210621 11:17:14.247" endtime="20210621 11:17:22.822"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:14.194" endtime="20210621 11:17:22.822"/>
+</kw>
+<kw name="Fechar o navegador" library="kw_automation" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210621 11:17:22.824" endtime="20210621 11:17:25.023"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:22.823" endtime="20210621 11:17:25.023"/>
+</kw>
+<status status="PASS" starttime="20210621 11:16:49.138" endtime="20210621 11:17:25.024"/>
+</test>
+<test id="s1-t4" name="Caso de Teste 04: Adicionar e Remover Produtos no Carrinho">
+<kw name="Abrir o navegador" library="kw_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210621 11:17:25.028" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210621 11:17:25.028" endtime="20210621 11:17:26.566"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:25.027" endtime="20210621 11:17:26.567"/>
+</kw>
+<kw name="Acessar a página inicial do site" library="kw_automation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210621 11:17:26.572" level="INFO">Opening url 'http://automationpractice.com/'</msg>
+<status status="PASS" starttime="20210621 11:17:26.571" endtime="20210621 11:17:42.157"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210621 11:17:52.161" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210621 11:17:42.157" endtime="20210621 11:17:52.161"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210621 11:17:52.175" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210621 11:17:52.161" endtime="20210621 11:17:52.175"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:26.568" endtime="20210621 11:17:52.176"/>
+</kw>
+<kw name="Digitar o nome do produto &quot;t-shirt&quot; no campo de pesquisa" library="kw_automation" sourcename="Digitar o nome do produto &quot;${PRODUCT}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=search_query_top</arg>
+<arg>${PRODUCT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210621 11:17:52.178" level="INFO">Typing text 't-shirt' into text field 'id=search_query_top'.</msg>
+<status status="PASS" starttime="20210621 11:17:52.178" endtime="20210621 11:17:52.327"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:52.177" endtime="20210621 11:17:52.328"/>
+</kw>
+<kw name="Clicar no botão pesquisar" library="kw_automation">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name=submit_search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210621 11:17:52.329" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" starttime="20210621 11:17:52.328" endtime="20210621 11:17:55.962"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:52.328" endtime="20210621 11:17:55.963"/>
+</kw>
+<kw name="Clicar no botão &quot;Add to cart&quot; do produto" library="kw_automation" sourcename="Clicar no botão &quot;${ADD_CART}&quot; do produto">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//*[@id="center_column"]//div[@class="product-container"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20210621 11:17:55.967" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="center_column"]//div[@class="product-container"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210621 11:17:56.119" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=91.0.4472.106)
+</msg>
+<status status="FAIL" starttime="20210621 11:17:55.999" endtime="20210621 11:17:56.119"/>
+</kw>
+<msg timestamp="20210621 11:17:56.119" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=91.0.4472.106)
+</msg>
+<msg timestamp="20210621 11:17:56.193" level="FAIL">Element with locator 'xpath=//*[@id="center_column"]//div[@class="product-container"]' not found.</msg>
+<status status="FAIL" starttime="20210621 11:17:55.967" endtime="20210621 11:17:56.193"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//*[@id="center_column"]//a[1][@class="button ajax_add_to_cart_button btn btn-default"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210621 11:17:56.193" endtime="20210621 11:17:56.193"/>
+</kw>
+<status status="FAIL" starttime="20210621 11:17:55.964" endtime="20210621 11:17:56.193"/>
+</kw>
+<kw name="Clicar no botão &quot;Proceed to checkout&quot;" library="kw_automation" sourcename="Clicar no botão &quot;${PROCEED}&quot;">
+<status status="NOT RUN" starttime="20210621 11:17:56.193" endtime="20210621 11:17:56.193"/>
+</kw>
+<kw name="Clicar no botão de remoção de produtos (delete) no produto do carrinho" library="kw_automation">
+<status status="NOT RUN" starttime="20210621 11:17:56.193" endtime="20210621 11:17:56.193"/>
+</kw>
+<kw name="Fechar o navegador" library="kw_automation" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210621 11:17:56.193" endtime="20210621 11:17:58.353"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:56.193" endtime="20210621 11:17:58.354"/>
+</kw>
+<status status="FAIL" starttime="20210621 11:17:25.026" endtime="20210621 11:17:58.355">Element with locator 'xpath=//*[@id="center_column"]//div[@class="product-container"]' not found.</status>
+</test>
+<test id="s1-t5" name="Caso de Teste 05: Botão Carrinho">
+<kw name="Abrir o navegador" library="kw_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210621 11:17:58.362" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210621 11:17:58.361" endtime="20210621 11:17:59.918"/>
+</kw>
+<status status="PASS" starttime="20210621 11:17:58.360" endtime="20210621 11:17:59.919"/>
+</kw>
+<kw name="Acessar a página inicial do site" library="kw_automation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210621 11:17:59.921" level="INFO">Opening url 'http://automationpractice.com/'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210621 11:18:07.235" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.106)
+</msg>
+<status status="FAIL" starttime="20210621 11:18:03.165" endtime="20210621 11:18:07.235"/>
+</kw>
+<msg timestamp="20210621 11:18:07.235" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.106)
+</msg>
+<msg timestamp="20210621 11:18:07.269" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=91.0.4472.106)
+</msg>
+<status status="FAIL" starttime="20210621 11:17:59.920" endtime="20210621 11:18:07.269"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210621 11:18:07.269" endtime="20210621 11:18:07.269"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20210621 11:18:07.269" endtime="20210621 11:18:07.269"/>
+</kw>
+<status status="FAIL" starttime="20210621 11:17:59.920" endtime="20210621 11:18:07.269"/>
+</kw>
+<kw name="Clicar no ícone carrinho de compras no menu superior direito" library="kw_automation">
+<status status="NOT RUN" starttime="20210621 11:18:07.269" endtime="20210621 11:18:07.269"/>
+</kw>
+<kw name="Coferir se o Carrinho está vazio" library="kw_automation">
+<status status="NOT RUN" starttime="20210621 11:18:07.274" endtime="20210621 11:18:07.274"/>
+</kw>
+<kw name="Fechar o navegador" library="kw_automation" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210621 11:18:07.276" endtime="20210621 11:18:09.379"/>
+</kw>
+<status status="PASS" starttime="20210621 11:18:07.275" endtime="20210621 11:18:09.380"/>
+</kw>
+<status status="FAIL" starttime="20210621 11:17:58.355" endtime="20210621 11:18:09.380">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=91.0.4472.106)
+</status>
+</test>
+<test id="s1-t6" name="Caso de Teste 06: Adicionar Cliente">
+<kw name="Abrir o navegador" library="kw_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210621 11:18:09.384" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210621 11:18:09.384" endtime="20210621 11:18:11.023"/>
+</kw>
+<status status="PASS" starttime="20210621 11:18:09.384" endtime="20210621 11:18:11.023"/>
+</kw>
+<kw name="Acessar a página inicial do site" library="kw_automation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210621 11:18:11.026" level="INFO">Opening url 'http://automationpractice.com/'</msg>
+<status status="PASS" starttime="20210621 11:18:11.025" endtime="20210621 11:18:11.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210621 11:18:21.411" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210621 11:18:11.404" endtime="20210621 11:18:21.411"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210621 11:18:21.543" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210621 11:18:21.418" endtime="20210621 11:18:21.543"/>
+</kw>
+<msg timestamp="20210621 11:18:21.544" level="FAIL">Title should have been 'My Store' but was '508 Resource Limit Is Reached'.</msg>
+<status status="FAIL" starttime="20210621 11:18:21.411" endtime="20210621 11:18:21.544"/>
+</kw>
+<status status="FAIL" starttime="20210621 11:18:11.024" endtime="20210621 11:18:21.545"/>
+</kw>
+<kw name="Clicar no botão superior direito “Sign in”" library="kw_automation" sourcename="Clicar no botão superior direito “${LOGIN}”">
+<status status="NOT RUN" starttime="20210621 11:18:21.546" endtime="20210621 11:18:21.546"/>
+</kw>
+<kw name="Inserir um e-mail válido" library="kw_automation">
+<status status="NOT RUN" starttime="20210621 11:18:21.546" endtime="20210621 11:18:21.546"/>
+</kw>
+<kw name="Clicar em &quot;Create an account&quot; para cadastrar" library="kw_automation" sourcename="Clicar em &quot;${CREAT_ACCOUNT}&quot; para cadastrar">
+<status status="NOT RUN" starttime="20210621 11:18:21.549" endtime="20210621 11:18:21.549"/>
+</kw>
+<kw name="Preencher os campos obrigatórios" library="kw_automation">
+<status status="NOT RUN" starttime="20210621 11:18:21.550" endtime="20210621 11:18:21.550"/>
+</kw>
+<kw name="Clicar em &quot;Register&quot; para finalizar o cadastro" library="kw_automation" sourcename="Clicar em &quot;${REGISTER}&quot; para finalizar o cadastro">
+<status status="NOT RUN" starttime="20210621 11:18:21.551" endtime="20210621 11:18:21.551"/>
+</kw>
+<kw name="Fechar o navegador" library="kw_automation" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210621 11:18:21.553" endtime="20210621 11:18:23.726"/>
+</kw>
+<status status="PASS" starttime="20210621 11:18:21.552" endtime="20210621 11:18:23.726"/>
+</kw>
+<status status="FAIL" starttime="20210621 11:18:09.384" endtime="20210621 11:18:23.727">Title should have been 'My Store' but was '508 Resource Limit Is Reached'.</status>
+</test>
+<doc>Newste arquivo estarão presentes nossos primeiros fluxos de automação web e
+seus respectivos cenários automatizados</doc>
+<status status="FAIL" starttime="20210621 11:16:13.265" endtime="20210621 11:18:23.732"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="4" skip="0" id="s1" name="Webautomation">Webautomation</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210621 11:17:56.119" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=91.0.4472.106)
+</msg>
+<msg timestamp="20210621 11:18:07.235" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.106)
+</msg>
+</errors>
+</robot>
